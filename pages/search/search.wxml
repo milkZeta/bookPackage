@@ -1,0 +1,26 @@
+<!--pages/search/search.wxml-->
+<view class="searchBoard" >
+  <view class="searchType"> 
+    <view>{{chooseValue}}</view>
+    <image src="/pages/images/dropdown.png" class="dropdownImg" bindtap="chooseType"></image>      
+  </view>
+  <view class="option_view {{dropdownClass}}">
+      <view id="name_option" class="name_option ch_option" bindtap="byName" data-byWhich="书名" >书名</view>
+      <view id="author_option" class="author_option ch_option" bindtap="byAuthor" data-byWhich="作者">作者</view>
+  </view>  
+  <input name="searchBox" type="text" bindinput="searchInput" placeholder="请输入房号" />  
+</view>
+<button type="submit" bindtap="searchBook">搜索</button>
+<scroll-view scroll-y="true" class="items-list">
+   <view class="book-item">      
+      <block wx:for="{{list}}">
+        <view class="book-title">{{item.bookName}}</view>
+        <view class="book-title">作者:<label class="label_author">{{item.bookAuth}}</label></view>
+        <view  class="book-card">
+          <image src="{{item.bookCover}}" class="card-left">
+          </image>
+          <view class="book-right">{{item.bookDesc}}</view>
+        </view>
+      </block>     
+   </view>
+ </scroll-view>

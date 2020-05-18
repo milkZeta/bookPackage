@@ -1,0 +1,21 @@
+ <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" bindtap='tapBanner'  data-indexurl='{{item}}' ></image>  
+          </swiper-item>
+        </block>
+ </swiper>
+ <scroll-view scroll-y="true" class="items-list">
+   <view class="book-item">      
+      <block wx:for="{{list}}">
+        <view class="book-title">{{item.bookName}}</view>
+        <view class="book-title">作者:<label class="label_author">{{item.bookAuth}}</label></view>
+        <view  class="book-card">
+          <image src="{{item.bookCover}}" class="card-left">
+          </image>          
+          <view class="book-right">{{item.bookDesc}}</view>
+        </view>
+      </block>     
+   </view>
+ </scroll-view> 

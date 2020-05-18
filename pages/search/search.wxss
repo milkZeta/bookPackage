@@ -1,0 +1,47 @@
+/* pages/search/search.wxss */
+.searchBoard{
+  display:flex;
+}
+.searchBox{
+  height: 2rem;
+  border-style: solid;
+  border-width: 1px;
+}
+.searchType{
+  display:flex;
+  margin-left:1%;
+}
+.dropdownHide{
+  display:none;
+}
+.option_view{
+  position:fixed;
+  width:40px;
+  top:4%;
+  left:1%;
+  color: #1A94E6;
+}
+.dropdownImg{
+  width:20px;
+  height:20px;
+}
+.ch_option:hover{
+  color:#136DA9;
+  font-size: 1.2rem;
+}
+.book-card{
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+.card-left{
+  width: 65%;
+  height: 200px;
+}
+.book-right{
+   width: 30%;
+  height: 300px;
+}
+.label_author{
+  color: #1A94E6;
+}

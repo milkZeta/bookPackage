@@ -1,0 +1,47 @@
+/* pages/readbook/readbook.wxss */
+page{
+  background-color: #DEB887;
+  height:100%;
+}
+.readboard{
+  width: 100%;
+  height:100%;
+}
+.readdHeader{
+  height:8%;
+}
+.readContent{
+  width: 90%;
+  margin-left: 5%;
+  background-color: #ffffff;
+}
+.goImg{
+ width: 20px;
+ height: 20px;
+ right: 1.5%;
+ top:2.5%;
+ position: fixed;
+}
+.goImg:hover{
+  width:23px;
+  height:23px;
+}
+.pageInput{
+ width: 8%;
+ position: fixed;
+ border-color: #1296db;
+ right: 7%;
+ top:2%;
+ border-width: 2px;
+ border-style: solid;
+}
+.bookNameLabel{
+ left: 10%;
+ position: fixed;
+ top: 2%;
+}
+.pageNo{
+  position: fixed;
+  right: 5%;
+}
+

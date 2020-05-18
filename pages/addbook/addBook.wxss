@@ -1,0 +1,25 @@
+/* pages/addBook/addBook.wxss */
+.input_block{
+  display:flex;
+  box-shadow:1rpx 0 1rpx;
+  line-height:80rpx;
+}
+.input_style{
+  margin-left: 10rpx;
+  height:80rpx;
+}
+.bdsc_label{
+  padding-left:10rpx;
+}
+.download{
+  color:#539bc5;
+  text-decoration-line: underline;
+  margin-right: 10rpx;
+}
+.choose_op{
+  display:flex;
+}
+.del_img{
+  width:45rpx;
+  height:45rpx;
+}

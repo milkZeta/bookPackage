@@ -1,0 +1,35 @@
+<!--pages/addBook/addBook.wxml-->
+<view>
+    <view class="input_block"> <label class="bdsc_label">书名:</label><input bindblur="book_name" class="input_style"/></view>
+    <view class="input_block"> <label class="bdsc_label">作者:</label><input bindblur="book_auth" class="input_style"/></view>
+    <view class="input_block"> <label class="bdsc_label">出版社:</label><input bindblur="book_publish" class="input_style"/></view>
+    <view class="input_block"> <label class="bdsc_label">描述:</label><input bindblur="book_desc" class="input_style"/></view>
+    <view class="input_block"> 
+      <radio-group class="item-right radio-group" bindchange="changeSex">
+          电子书 <radio value="e_book" checked="true"/>
+          实体书<radio value="p_book"/>     
+      </radio-group>
+    </view>
+    <view class="upload_area">
+       <label>{{openId}}</label>
+       <label>上传格式为txt、mobi、pdf</label>      
+       <button bindtap="choose_file">选择文件</button>
+        <view class="choose_op" wx:for="{{upfilelist}}" wx:key="index" wx:for-item="item">
+            <view class='download' bindtap='open_file' data-path="{{item.path}}">{{item.name}}</view>    
+            <view data-name="{{item.name}}" data-path="{{item.path}}" bindtap='del_file' class='radio_view'><image class="del_img" src='/pages/images/delete.png'></image>
+            </view>      
+        </view>
+    </view>
+    <view class="upload_area">
+       <label>{{openId}}</label>
+       <label>上传格式为txt、mobi、pdf</label>      
+       <button bindtap="choose_image">选择封面图片</button>
+        <view class="choose_op" wx:for="{{uploadImgFile}}" wx:key="index" wx:for-item="item">
+            <view class='download' data-path="{{item.path}}">
+               <image src="{{item.path}}"></image>{{item.name}}</view>    
+            <view data-name="{{item.name}}" data-path="{{item.path}}" bindtap='del_file' class='radio_view'><image class="del_img" src='/pages/images/delete.png'></image>
+            </view>      
+        </view>
+    </view>
+    <view class="submit_data" bindtap="submit_data"><button type="submit">提交</button></view>
+</view>

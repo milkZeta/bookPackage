@@ -1,0 +1,12 @@
+<!--pages/readbook/readbook.wxml-->
+<view class="readboard">
+   <view class="readdHeader">
+      <view class="bookNameLabel">{{bookName}}</view>
+      <image src="/pages/images/go.png" class="goImg"></image>
+      <input type="text" id="pageInput" bindblur="pageInput"  class="pageInput"/>
+   </view>
+   <view class="readContent" bindtap="onContentClick">
+     {{content[pageNo-1]}}
+   </view>
+   <view class="pageNo">{{pageNo}}</view>
+</view>

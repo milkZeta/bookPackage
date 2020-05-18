@@ -1,0 +1,26 @@
+<!--pages/tes/test.wxml-->
+<view>
+  <view class="add-btn" hover-class="plus-hover" bindtap="add_click">
+    <image src="/pages/images/add-btn.png"></image>
+  </view>
+  <view class="board  {{hideStatus}}"></view>
+  <view class="resource_choose {{hideStatus}}">
+    <image class="floatImg" src="{{cover}}">
+      <image class="closeImg" src='/pages/images/close.png' bindtap="closeImg"></image>
+      <image class="bookImg" src='/pages/images/book.png' bindtap="readResource"></image>
+      <image class="deleteImg" src='/pages/images/delete.png' bindtap="deleteResource"></image>
+      <image class="shareImg" src='/pages/images/share.png' bindtap="shareResource"></image>
+      <image class="downloadImg" src='/pages/images/download.png' bindtap="downloadResource"></image>
+    </image>
+  </view>   
+  <block wx:for="{{alphe.length}}"> 
+   <block wx:if="{{section_list[alphe[index]].length>0}}">
+      <view class="section section_block" scroll-x="true">    
+          <view class="first_litter">{{alphe[index]}}</view>    
+          <block wx:for="{{section_list[alphe[index]]}}">        
+            <view class="book_sharp" bindtap="showBookPicture" data-bookFilePath="{{item.bookFilePath}}" data-bookId="{{item.bookId}}" data-bookName="{{item.bookName}}" data-cover="{{item.bookCover}}">{{item.bookName}}</view>
+          </block>
+      </view>
+    </block>
+  </block>
+</view>
